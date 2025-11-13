@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopier Page</title>
+  <style>
+body{
+ background:floralwhite;
+ font-family:arial;
+ margin:0;
+ padding:15px;
+}
+header{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ margin-bottom:10px;
+}
+.logo{
+ color:coral;
+ font-size:25px;
+ font-weight:bold;
+}
+.cart{
+ position:relative;
+}
+.cart-icon{
+ font-size:22px;
+ cursor:pointer;
+}
+.cart-count{
+ position:absolute;
+ top:-8px;
+ right:-10px;
+ background:coral;
+ color:white;
+ font-size:10px;
+ border-radius:50%;
+ padding:2px 5px;
+}
+.categories{
+ display:flex;
+ flex-wrap:wrap;
+ gap:5px;
+ margin:15px 0;
+}
+.categories button{
+ border:1px solid gray;
+ background:white;
+ padding:7px 10px;
+ border-radius:5px;
+ cursor:pointer;
+}
+.categories .active{
+ background:tomato;
+ color:white;
+ border-color:tomato;
+}
+.categories button:hover{
+ background:tomato;
+ color:white;
+}
+.search-box{
+ margin-bottom:15px;
+}
+.search-box input{
+ width:100%;
+ padding:8px;
+ border:1px solid darkgray;
+ border-radius:6px;
+}
+.product-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:15px;
+}
+.product-card{
+ background:white;
+ border-radius:8px;
+ box-shadow:1px 1px 4px lightgray;
+ padding:12px;
+ text-align:center;
+}
+.product-card img{
+ width:100%;
+ height:190px;
+ object-fit:cover;
+ border-radius:4px;
+ margin-bottom:10px;
+}
+.product-card h3{
+ color:sandybrown;
+ font-size:15px;
+ margin-bottom:5px;
+}
+.product-card p{
+ font-size:13px;
+ color:dimgray;
+ margin-bottom:8px;
+}
+.price{
+ color:darkorange;
+ font-weight:bold;
+ margin-bottom:8px;
+}
+.add-cart{
+ background:tomato;
+ color:white;
+ border:none;
+ padding:7px 14px;
+ border-radius:5px;
+ cursor:pointer;
+}
+.add-cart:hover{
+ background:orangered;
+}
+
+.help-btn{
+ position:fixed;
+ bottom:20px;
+ right:20px;
+ background:#e25822; /* a bit darker coral-orange */
+ color:white;
+ border:none;
+ border-radius:4px;
+ padding:12px 18px;
+ font-size:16px;
+ font-weight:bold;
+ box-shadow:1px 2px 6px gray;
+ cursor:pointer;
+}
+
+.chat-popup{
+ position:fixed;
+ bottom:70px;
+ right:20px;
+ background:white;
+ border:1px solid lightgray;
+ box-shadow:0 2px 8px gray;
+ border-radius:10px;
+ width:260px;
+ display:none;
+ padding:10px;
+}
+.chat-popup p{
+ margin:0;
+ color:black;
+ font-size:14px;
+}
+.chat-popup button{
+ margin-top:8px;
+ background:coral;
+ color:white;
+ border:none;
+ padding:6px 10px;
+ border-radius:5px;
+ cursor:pointer;
+ font-size:13px;
+}
+.chat-popup button:hover{
+ background:darkorange;
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="logo">SHOPIER</h1>
+  <div class="cart">
+    <span class="cart-icon">🛒</span>
+    <span class="cart-count">0</span>
+  </div>
+</header>
+
+<div class="categories">
+ <button class="active">All</button>
+ <button>Men clothng</button>
+ <button>Women clothng</button>
+ <button>Electronics</button>
+ <button>Accesories</button>
+ <button>Perfumes</button>
+</div>
+
+<div class="search-box">
+ <input type="text" placeholder="Search prodcts...">
+</div>
+
+<div class="product-grid">
+
+ <div class="product-card">
+   <img src="https://images.pexels.com/photos/845434/pexels-photo-845434.jpeg?auto=compress&cs=tinysrgb&w=600">
+   <h3>Leather Sneakers</h3>
+   <p>Nice comfy shoes good for walking or school days.</p>
+   <div class="price">$59</div>
+   <button class="add-cart">Add to cart</button>
+ </div>
+
+ <div class="product-card">
+   <img src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600">
+   <h3>Mens T-Shirt</h3>
+   <p>Soft cotton shirt simple and cool for hot days.</p>
+   <div class="price">$19</div>
+   <button class="add-cart">Add to cart</button>
+ </div>
+
+ <div class="product-card">
+   <img src="https://images.pexels.com/photos/1228512/pexels-photo-1228512.jpeg?auto=compress&cs=tinysrgb&w=600">
+   <h3>Bluetooth Speaker</h3>
+   <p>Small speaker but loud sound and good bass.</p>
+   <div class="price">$79</div>
+   <button class="add-cart">Add to cart</button>
+ </div>
+
+ <div class="product-card">
+   <img src="https://images.pexels.com/photos/1007328/pexels-photo-1007328.jpeg?auto=compress&cs=tinysrgb&w=600">
+   <h3>Summer Dress</h3>
+   <p>Light dress with floral print and nice color mix.</p>
+   <div class="price">$48</div>
+   <button class="add-cart">Add to cart</button>
+ </div>
+
+ <div class="product-card">
+   <img src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=600">
+   <h3>Sunglasses</h3>
+   <p>Cool looking shades for sunny days.</p>
+   <div class="price">$25</div>
+   <button class="add-cart">Add to cart</button>
+ </div>
+
+ <div class="product-card">
+   <img src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=600">
+   <h3>Gaming Mouse</h3>
+   <p>Mouse with light and smooth clicks for games.</p>
+   <div class="price">$35</div>
+   <button class="add-cart">Add to cart</button>
+ </div>
+
+ <div class="product-card">
+   <img src="https://images.pexels.com/photos/845457/pexels-photo-845457.jpeg?auto=compress&cs=tinysrgb&w=600">
+   <h3>Perfume Bottle</h3>
+   <p>Smells good and stays longer on clothes.</p>
+   <div class="price">$99</div>
+   <button class="add-cart">Add to cart</button>
+ </div>
+
+ <div class="product-card">
+   <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=600">
+   <h3>Simple Watch</h3>
+   <p>Nice wrist watch for both men and ladies.</p>
+   <div class="price">$44</div>
+   <button class="add-cart">Add to cart</button>
+ </div>
+
+</div>
+
+<button class="help-btn">Help</button>
+
+<div class="chat-popup">
+  <p>👋 Hi! How can we help you?</p>
+  <button>Send message</button>
+</div>
+
+</body>
+</html>
